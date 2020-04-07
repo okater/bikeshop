@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Task 1.5 - Bike shop website</title>
+  <meta name="description" content="Super bikes. German quality. Chinese price :)">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <input type="radio" name="links" class="links" id="A" checked="checked">
+    <input type="radio" name="links" class="links" id="B">
+    <input type="radio" name="links" class="links" id="C">
+    <header class="header"></header>
+  
+    <aside class="aside left">
+      <nav>
+        <label for="A">Home</label>
+        <label for="B">About us</label>
+        <label for="C">Contacts</label>
+      </nav>
+    </aside>
+    <article class="container">
+      <div class="slide main">
+        <div class="product topdeal">
+          <div class="discount"><p>72%<br>off</p></div>
+          <img src="images/bike1.jpg" alt="">
+          <div class="description">220V Stainless steel Juicers 2 Speed electric Juice Extractor Fruit Drinking Machine For Home Sonifer</div>
+          <div class="price">
+              <span class="price1">$49.99</span><span class="price2">$69.99</span>
+              <span class="amazon">Amazon</span>
+              <hr>
+          </div>
+          <div class="bottom">
+              <div>Free Shipping</div>
+              <div>New</div>
+              <div>00:02:29</div>
+          </div>
+          <hr>
+        </div>
+        <div class="product">
+          <div class="discount"><p>68%<br>off</p></div>
+          <img src="images/bike2.jpg" alt="">
+          <div class="description">The Stereo Hybrid 120 EXC is already something of a legend in its own lifetime, but that wasn't enough for our designers.</div>
+          <div class="price">
+              <span class="price1">$49.99</span><span class="price2">$69.99</span>
+              <span class="amazon">Amazon</span>
+          </div>
+          <hr>
+          <div class="bottom">
+              <div>Free Shipping</div>
+              <div>New</div>
+              <div>00:02:29</div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="discount"><p>66%<br>off</p></div>
+          <img src="images/bike3.jpg" alt="">
+          <div class="description">The Stereo Hybrid 120 EXC is already something of a legend in its own lifetime, but that wasn't enough for our designers.</div>
+          <div class="price">
+                  <span class="price1">$49.99</span><span class="price2">$69.99</span>
+                  <span class="amazon">Amazon</span>
+              </div>
+              <hr>
+              <div class="bottom">
+                  <div>Free Shipping</div>
+                  <div>New</div>
+              </div>
+        </div>
+        <div class="product">
+          <div class="discount"><p>45%<br>off</p></div>
+          <img src="images/bike4.jpg" alt="">
+          <div class="description">The Stereo Hybrid 120 EXC is already something of a legend in its own lifetime, but that wasn't enough for our designers.</div>
+          <div class="price">
+              <span class="price1">$49.99</span><span class="price2">$69.99</span>
+              <span class="amazon">Amazon</span>
+          </div>
+          <hr>
+          <div class="bottom">
+              <div>Free Shipping</div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="discount"><p>40%<br>off</p></div>
+          <img src="images/bike5.jpg" alt="">
+          <div class="description">The Stereo Hybrid 120 EXC is already something of a legend in its own lifetime, but that wasn't enough for our designers.</div>
+          <div class="price">
+            <span class="price1">$49.99</span><span class="price2">$69.99</span>
+            <span class="amazon">Amazon</span>
+          </div>
+          <hr>
+          <div class="bottom">
+            <div>Free Shipping</div>
+            <div>New</div>
+            <div>01:23:00</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="slide about">
+        <h1>Find Us</h1>
+
+        <div id="googleMap" style="width:100%;min-height:400px;height:100%;"></div>
+        
+        <script>
+          // Google Maps API Font Fix - START
+          var head = document.getElementsByTagName( 'head' )[0];
+          var insertBefore = head.insertBefore;
+          head.insertBefore = function( newElement, referenceElement ) {
+            if ( newElement.href && newElement.href.indexOf( 'https://fonts.googleapis.com/css?family=Roboto' ) === 0 ) return;
+            insertBefore.call( head, newElement, referenceElement );
+          };
+          // Google Maps API Font Fix - END
+          function myMap() {
+            var mapProp= {
+              center:new google.maps.LatLng(50.433881,30.504236),
+              zoom:5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+          }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>    
+      </div>
+
+
+      <div class="slide contacts">
+        <form action="submit.php">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+  
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+    </article>
+    <aside class="aside right">
+      <input type="text" placeholder="Search.." class="search">
+      <div class="calendar">Calendar</div>
+    </aside>
+  
+    <footer class="footer">&copy; omkater 2020</footer>
+</div>
+</body>
+</html>
